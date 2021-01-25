@@ -54,7 +54,7 @@ public class CardsStructure : MonoBehaviour
         CardSetter(hand2, deck2);
     }
 
-    public CardCreatorManager[] CreateHand()
+    private CardCreatorManager[] CreateHand()
     {
         CardCreatorManager[] cardsSelected = new CardCreatorManager[nCards];
         
@@ -66,7 +66,7 @@ public class CardsStructure : MonoBehaviour
         return cardsSelected;
     }
 
-    public void ResetTransforms(List<GameObject> hand)
+    private void ResetTransforms(List<GameObject> hand)
     {
         foreach(var card in hand)
         {
@@ -77,7 +77,7 @@ public class CardsStructure : MonoBehaviour
         }
     }
 
-    public void CardSetter(List<GameObject> hand, CardCreatorManager[] deck)
+    private void CardSetter(List<GameObject> hand, CardCreatorManager[] deck)
     {
         foreach (var card in hand)
         {
