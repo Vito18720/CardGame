@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class CardsStructure : MonoBehaviour
 {
     #region Singleton
+    //Uso del patr√≥n singleton para tener una instancia est√°tica de la clase de estructuraci√≥n del juego
     public static CardsStructure instance;
 
     private void Awake()
@@ -15,7 +16,7 @@ public class CardsStructure : MonoBehaviour
     }
     #endregion
 
-    //Clase encargada de asignar a un array (la baraja completa) una serie de cartas (de una lista con cada tipo de carta) con un numero limitado de ellas
+    //Clase encargada de asignar  con un numero limitado de ellas un array (la baraja completa) una serie de cartas (de una lista con cada tipo de carta)
     public List<CardCreatorManager> cardsType;
 
     public int nCards;
@@ -35,12 +36,13 @@ public class CardsStructure : MonoBehaviour
 
     private void Start()
     {
-        //para probar el funcionamiento de la creacion de cartas no se desarrollara la parte de seleccionar las cartas de la mano, sino que ser· aleatorio
+        //para probar el funcionamiento de la creacion de cartas no se desarrollara la parte de seleccionar las cartas de la mano, sino que serÔøΩ aleatorio
         deck1 = CreateHand();
         deck2 = CreateHand();
 
-        //Pool de 5 cartas m·ximas por mano
+        //Pool de 5 cartas maximas por mano
         hand1 = Pooler.GetPoolObjects(cardPrefab, 5, hand1Parent);
+        //Asigno la mano de cada pool de cartas
         foreach (var c in hand1) c.GetComponent<Dragable>().typeOfHand = Dragable.Hands.Hand1;
         hand2 = Pooler.GetPoolObjects(cardPrefab, 5, hand2parent);
         foreach (var c in hand2) c.GetComponent<Dragable>().typeOfHand = Dragable.Hands.Hand2;
@@ -54,6 +56,7 @@ public class CardsStructure : MonoBehaviour
         CardSetter(hand2, deck2);
     }
 
+    //Crea la baraja
     private CardCreatorManager[] CreateHand()
     {
         CardCreatorManager[] cardsSelected = new CardCreatorManager[nCards];
@@ -66,6 +69,7 @@ public class CardsStructure : MonoBehaviour
         return cardsSelected;
     }
 
+    //Al meterlos en un canvas el rect transform se desconfigura, y aqui lo reseteo a los valores requeridos
     private void ResetTransforms(List<GameObject> hand)
     {
         foreach(var card in hand)
@@ -76,7 +80,8 @@ public class CardsStructure : MonoBehaviour
             cardTransform.localScale = new Vector3(0.5f, 1f, 0f);
         }
     }
-
+    
+    //Configura la mano en base a la baraja previamente creada
     private void CardSetter(List<GameObject> hand, CardCreatorManager[] deck)
     {
         foreach (var card in hand)

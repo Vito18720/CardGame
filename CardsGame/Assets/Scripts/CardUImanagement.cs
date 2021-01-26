@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CardUImanagement : MonoBehaviour
 {
     //Clase encargada del actualizado de la información de la carta
-    //public CardCreatorManager cardValues;
+    //public CardCreatorManager cardValues; ya no es necesario porque se lo paso directamente a la funcion
     public bool cardUse;
     [Space]
     public Image champImage;
@@ -19,6 +19,7 @@ public class CardUImanagement : MonoBehaviour
         cardUse = true;
     }
 
+    //Funcion para actualizar la información de la carta en base a unos valores que se le pasan
     public void RefreshCard(CardCreatorManager cardV)
     {
         Debug.Log(cardV.name);

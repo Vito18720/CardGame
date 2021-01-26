@@ -9,17 +9,20 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapInputs.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CardUImanagement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/MapInputs.cs" />
+      <option value="$PROJECT_DIR$/Assets/PlayerManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Dragable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CardsStructure.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CardUImanagement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CardCreatorManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/PlayerManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CardsStructure.cs" />
-      <option value="$PROJECT_DIR$/Assets/Dragable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Pooler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ShowCardsHand.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dragable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dropable.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1n0SxRneVSJZcyfajQoXNg6AdT1" />
@@ -66,6 +69,7 @@
       <workItem from="1610625566356" duration="1968000" />
       <workItem from="1610628328840" duration="1075000" />
       <workItem from="1611044882899" duration="4938000" />
+      <workItem from="1611649888914" duration="1762000" />
     </task>
     <servers />
   </component>

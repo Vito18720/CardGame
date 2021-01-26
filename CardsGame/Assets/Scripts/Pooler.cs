@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Clase pooler donde guardo una funcion estatica con la que de manera general hago una lista o pool de objetos, en base al prefab, el numero de objetos y el 
+//padre, para luego devlverla (object pool)
 public class Pooler : MonoBehaviour
 {
     public static List<GameObject> GetPoolObjects(GameObject prefab, int numberList, GameObject pool)

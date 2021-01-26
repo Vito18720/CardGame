@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+//Clase para los slot del tablero que se comunican entre el script dragable de las cartas para determinar si una carta se puede o no posicionar en el
 public class Dropable : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerExitHandler
 {
     private Color startColor;
@@ -20,6 +21,8 @@ public class Dropable : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPoin
         startColor = dropable;
     }
 
+    //Compruebo si la carta puede o no soltarse sobre el slot dependiendo del la mano a la que pertenezcan ambos
+    //(puedo porque el bloqueo de raycast de la carta esta desactivado)
     public void OnPointerEnter(PointerEventData eventData)
     {
         if(d != null)
@@ -39,6 +42,7 @@ public class Dropable : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPoin
 
     }
 
+    //Cuando suelto la carta y si esta sobre un slot valido la emparento a el 
     public void OnDrop(PointerEventData eventData)
     {
         if(eventData.pointerDrag.GetComponent<Dragable>() != null)
@@ -58,6 +62,7 @@ public class Dropable : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPoin
         d = null;
     }
 
+    //Al dejar de apuntar con el raton al slot vualve a su estado normal 
     public void OnPointerExit(PointerEventData eventData)
     {
         startColor.a = 0;

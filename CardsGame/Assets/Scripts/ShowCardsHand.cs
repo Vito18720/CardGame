@@ -4,16 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+//Clase para mostrar la mano dependiendo de que mano señale el raton
 public class ShowCardsHand : MonoBehaviour
 {
     public Dragable.Hands typeOfHand;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         Dragable.moveEvent += MoveCards;
     }
 
+    //Dependiendo del valor se moverá hacia arriba o hacia abajo
     void MoveCards(int moveStp, Dragable.Hands type)
     {
        if(typeOfHand == type)
